@@ -1,0 +1,126 @@
+﻿<html>
+<head>
+<title>Random Word Generator | Home</title>
+<style>
+html, body{
+margin: 0;
+padding: 0;
+font-family: 'arial';
+background-image:linear-gradient(to bottom right, black, grey, white);
+text-align: center;
+}
+header h1{
+font-size: 40px;
+position: relative;
+top:12px;
+padding: 8px;
+}
+#com{
+font-size: 26px;
+}
+header{
+text-align: center;
+border-bottom: solid 2px black;
+background-color: white;
+
+}
+header ul{
+display: inline;
+}
+header li{
+display: inline;
+list-style-type:none;
+margin: 15px;
+float: left;
+position: relative;
+bottom: 70px;
+left: 40px;
+padding: 12px;
+transition-duration: .3s;
+}
+a{
+text-decoration:none;
+color: black;
+}
+header li:hover{
+border-bottom: 3px solid black;
+cursor: pointer;
+
+}
+#home{
+border-bottom: grey solid 3px;
+}
+#home:hover{
+border-bottom:grey solid 3px;
+}
+button{ 
+margin: 0 auto;
+position: relative;
+top: 400px;
+right: 205px;
+font-size: 55px;
+border-radius: 27px;
+background-image: linear-gradient(to right, orange, yellow);
+font-weight: bold;
+opacity: .7;
+transition-duration: .2s;
+padding: 12px;
+border: 0;
+cursor: pointer;
+}
+button:hover{
+opacity: 1;
+cursor: pointer;
+}
+button:focus{
+    outline: none;   
+cursor: pointer;
+}
+button:active{
+background-image: linear-gradient(to left, orange, yellow);
+cursor: pointer;
+transition-duration: 0s;
+}
+h2{
+text-align: center;
+font-size: 60px;
+position: relative;
+top: 30px;
+padding: 12px;
+}
+#border{
+border: 5px black solid;
+width: 800px;
+height: 230px;
+margin: 0 auto;
+background-image: linear-gradient(to bottom, grey, white);
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>RandomWords<span id="com">.com</span></h1>
+<ul>
+<li id="home"><a href="index.html"> Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="QA.html">Q&A</a></li>
+<li> <a href="report.html"> Report a bug</a></li>
+</ul>
+</header>
+
+<button onclick="location.reload();">Generate!</button>
+<div id="border">
+<h2 id="wordHeaderLol"></h2>
+</div>
+<script>
+var words = ["School", "Noodle", "Yellow", "Woodcreek", "Insane", "Epic", "Smart", "Chicken", "Broken", "California", "Washington", "Bored", "Exciting", "Vowel", "Pronounce", "Dare","Share","Effect", "Dramatic","Wish", "Summer", "Season","Train","Heavy", "Dodge", "Elementary", "Shop", "Cart", "Game", "Phone", "Poor", "Rich", "Joke", "Key", "Shirt"]
+var randomWords = words[Math.floor(Math.random() * words.length)]; 
+document.getElementById("wordHeaderLol").innerHTML = randomWords;
+
+
+</script>
+
+</body>
+</html>
